@@ -1,0 +1,40 @@
+Adding Git Remote:
+First Create a repository in GitHub.com with the same name as the one you are local working directory on which you are working on.
+Copy the URL given in the description which you get after creating the repo.
+Check for a remote by typing in git remote.
+If not present and you need only need one remote then use the name origin,
+type this command  git remote add origin <the url of the github repository>
+Then check git status, add and commit if any files are there to be committed.
+Then finally push the file on to the git hub repository using the command
+git push origin master(this can be any of the branch names)
+
+
+Pulling the changes from Git Hub to local:
+We can run the command git pull origin master to pull any new files or commits that have been
+made online onto our local repository.
+
+
+Fork is only possible on Git Hub ,fork is a kind of concept where GitHub allows us to clone
+someone else's repository on their servers which again can be pulled on to our local
+machine to tweak them.Click the fork button on GitHub to fork that repository on to your own
+GitHub profile, which again can be cloned on to your own machine, to tweak any changes.
+Cloning automatically creates a remote which is generally named origin.
+
+
+Collaboration causes conflicts.
+When pulling from the remote i.e,GitHub on to your local machine when there are two different commits reachable from the
+same branch, we will lose the different commit on the local copy, to avoid that we would like to have a merged version of
+both these commits i.e merging the local and the remote branches.
+
+When we have a remote set up, git stores the local copies of all the remote branches these each will contain
+the state of the remote branches as of the last time you pushed or pulled the branch, which are name with
+the convention remote-name/branch-name so in this case origin/master.
+If there are changes in two repositories i.e one on the local and one on the GitHub, then we can only update
+the origin/master branch on the local machine, whereas the master branch can't be updated this is the case when t
+the change is made in the GitHub, later on the local machine we can merge the master and origin/master to have a
+synced state, git pull does this all by itself.
+So instead of using git fetch and then use git merge we can do that by using git pull which will reduce the overload.
+
+
+Pull requests in GitHub can be used to get feedback on our changes before committing them on to
+the master branch.
