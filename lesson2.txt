@@ -1,0 +1,22 @@
+To initialise an empty git repository we need to run git init
+Working Directory is nothing but the current directory which contains the files.
+It's better to have one commit per logical change.
+Git Diff without any arguments let's us know the difference between the files in the staging area and
+the Working Directory.
+To check the difference between the staging area and the most recent commit we can use
+git diff --staged
+git reset --hard resets any changes made in the staging directory or the Working directory.
+
+Branches:
+=========
+labels for commits are called Branches.
+Master is the name given to the main branch in most Git repositories.
+If we checkout a branch and make and then make a commit the branch label automatically updates
+to the new commit and that branch remains checked out.
+git branch can be used to see and create branches.git branch easy-mode(argument).
+git log -graph --oneline allows us to visualise the branches made
+git checkout -b <new-branch-name> this allows us to create and checkout branch at the same time.
+git merge branch_name branch_name
+After merging two branches to see the changes introduced by a particular commit in the commit log
+we can use git show to show the changes that commit has introduced in comparison with it's parent.
+To delete a branch we use git branch -d branch_name
